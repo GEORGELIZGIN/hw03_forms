@@ -21,7 +21,7 @@ def group_posts(request, slug):
 class NewPostView(LoginRequiredMixin, CreateView):
     form_class = PostForm
     success_url = reverse_lazy('index')
-    template_name = 'new_post.html'
+    template_name = 'posts/new_post.html'
 
     def form_valid(self, form):
         new_post = form.save(commit=False)
